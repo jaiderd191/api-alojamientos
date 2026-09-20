@@ -1,0 +1,221 @@
+{
+  "info": {
+    "_postman_id": "6362102c-56b7-489e-b2b3-8dbb8a626077",
+    "name": "Alojamientos API - Sprint 02",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58229496"
+  },
+  "item": [
+    {
+      "name": "00 - Health",
+      "item": [
+        {
+          "name": "GET /health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "01 - Registro",
+      "item": [
+        {
+          "name": "POST /api/v1/usuarios/registro",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/usuarios/registro",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "registro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /api/v1/usuarios/registro Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"correo\": \"correo-invalido\",\r\n  \"contrasena\": \"123456\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/usuarios/registro",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "registro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /api/v1/usuarios/login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"correo\": \"usuario@ejemplo.com\",\r\n  \"contrasena\": \"123456\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/usuarios/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /api/v1/usuarios/login Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"correo\": \"usuario@ejemplo.com\",\r\n  \"contrasena\": \"incorrecta\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/usuarios/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/v1/usuarios/perfil",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/usuarios/perfil",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "perfil"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /api/v1/admin/usuarios",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_admin}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/admin/usuarios",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "02 - Login",
+      "item": []
+    },
+    {
+      "name": "03 - Autenticación",
+      "item": []
+    },
+    {
+      "name": "04 - Autorización",
+      "item": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
